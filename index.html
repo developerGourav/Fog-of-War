@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fog of War Maze</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="ui-layer">
+            <div class="top-bar">
+                <span id="level-display">Level: 1</span>
+                <span id="timer-display" class="hidden">Time: 0s</span>
+                <button id="quit-in-game-btn" class="hidden" style="padding: 5px 15px; font-size: 1rem;">Quit</button>
+            </div>
+            <div class="overlay" id="overlay-screen">
+                <h1 id="overlay-title">Fog of War Maze</h1>
+                <p id="overlay-text">Use WASD or Arrow Keys to navigate the maze.<br>Find the glowing star exit.</p>
+                <div style="margin-bottom: 20px;">
+                    <label for="level-select" style="font-size: 1.2rem; margin-right: 10px;">Select Level:</label>
+                    <select id="level-select"
+                        style="padding: 5px 10px; font-size: 1.1rem; background: transparent; color: var(--accent-color); border: 1px solid var(--accent-color); border-radius: 4px; font-family: inherit; cursor: pointer; outline: none;">
+                    </select>
+                </div>
+                <div style="display:flex; gap:20px; align-items:center;">
+                    <button id="start-btn">Start Game</button>
+                    <button id="quit-menu-btn">Quit</button>
+                </div>
+            </div>
+        </div>
+        <canvas id="game-canvas"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
